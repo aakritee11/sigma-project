@@ -1,0 +1,85 @@
+<% layout('/layouts/boilerplate') -%>
+<div class="row">
+  <div class="col-8 offset-1">
+  <br><br>
+    <h3>Create a Listing</h3>
+   
+    <form method="post"
+     action="/listings"
+     novalidate class="needs-validation" 
+     enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input 
+        name="listing[title]" 
+        type="text" 
+        placeholder="Add a catchy "
+         class="form-control"
+         required>
+         <div class="invalid-feedback">
+          Please enter a title.
+        </div>
+      </div>
+      
+  <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea name="listing[description]" type="text"  class="form-control"></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="image" class="form-label">Image</label>
+    <input name="listing[image]"
+     type="file" 
+     placeholder="Upload Image" 
+     class="form-control"
+     required>
+  </div>
+
+ <div class="row">
+  <div class="mb-3 col-md-4">
+    <label for="price" class="form-label">Price</label>
+    <input 
+    name="listing[price]" 
+    type="number"
+     placeholder="2500" 
+     class="form-control" 
+     required>
+     <div class="invalid-feedback">
+      Please enter price.
+    </div>
+  </div>
+ 
+  <div class="mb-3 col-md-8">
+    <label for="country" class="form-label">Country</label>
+    <input 
+    name="listing[country]" 
+    type="text" 
+    placeholder="Nepal" 
+    class="form-control"
+    required>
+    <div class="invalid-feedback">
+      Please enter a country.
+    </div>
+  </div>
+ </div>
+
+  <div class="mb-3">
+    <label for="location" class="form-label">Location</label>
+    <input 
+    name="listing[location]" 
+    type="text" 
+    placeholder="Bandipur"
+     class="form-control"
+     required>
+     <div class="invalid-feedback">
+      Please enter the location.
+    </div>
+  </div>
+  
+  
+  <button class="btn btn-dark add-btn">Add</button>
+  <br><br>
+    </form>
+ 
+</div>
+</div>
+
